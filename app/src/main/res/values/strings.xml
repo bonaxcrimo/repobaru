@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">anime2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Login</string>
+    <string name="nav_header_subtitle">Klik menu login untuk login</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">login</string>
+    <string name="title_activity_register">register</string>
+    <string name="title_activity_favorit">favorit</string>
+    <string name="title_activity_tentang">tentang</string>
+    <string name="title_activity_animedetail">animedetail</string>
+</resources>
