@@ -57,7 +57,7 @@ public class home extends AppCompatActivity
     List<Anime> lstAnime;
     AnimeAdapter myAdapter;
     ArrayAdapter<String> spinAdapter;
-    String[]  options = {"rating","members"};
+    String[]  options = {"rating","members","rekomendasi"};
     int limit;
     ProgressDialog progress;
     String option;
@@ -123,7 +123,7 @@ public class home extends AppCompatActivity
         loadAnime();
         RecyclerView myrv = (RecyclerView) findViewById(R.id.recyclerview_id);
         myAdapter = new AnimeAdapter(this,lstAnime);
-        myrv.setLayoutManager(new GridLayoutManager(this,1));
+        myrv.setLayoutManager(new GridLayoutManager(this,2));
         myrv.setAdapter(myAdapter);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -150,7 +150,9 @@ public class home extends AppCompatActivity
 
     }
     private void loadAnime(){
-        StringRequest reqData = new StringRequest(Request.Method.GET, ServerApi.URL_ANIME+option+"/"+limit+"/"+query,
+        String url="";
+        url = query!="rekomendasi"?ServerApi.URL_ANIME+option+"/"+limit+"/"+query:ServerApi.URL_ANIME+option+"/"+limit+"/"+query;
+        StringRequest reqData = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
