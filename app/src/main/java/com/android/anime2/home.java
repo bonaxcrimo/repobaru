@@ -75,6 +75,7 @@ public class home extends AppCompatActivity
         spin = (Spinner) findViewById(R.id.spin);
         spinAdapter = new ArrayAdapter<String>(getApplicationContext(),R.layout.spintext,options);
         spin.setAdapter(spinAdapter);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         progress.setMessage("Loading");
         progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         progress.setIndeterminate(true);
@@ -272,10 +273,22 @@ public class home extends AppCompatActivity
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-
-        return super.onOptionsItemSelected(item);
+//        int id = item.getItemId();
+//        switch (item.getItemId()) {
+//            case android.R.id.home:
+//                this.finish();
+//                return true;
+//        }
+//
+//
+//        return super.onOptionsItemSelected(item);
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @SuppressWarnings("StatementWithEmptyBody")

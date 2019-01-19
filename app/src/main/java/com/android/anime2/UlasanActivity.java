@@ -45,7 +45,7 @@ public class UlasanActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final String Komen = komen.getText().toString();
                 if (TextUtils.isEmpty(Komen)) {
-                    komen.setError("Please enter your name");
+                    komen.setError("Please enter your comment");
                     komen.requestFocus();
                     return;
                 }
