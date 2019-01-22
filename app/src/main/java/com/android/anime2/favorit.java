@@ -183,6 +183,10 @@ public class favorit extends AppCompatActivity
                 Intent s= new Intent(favorit.this,register.class);
                 startActivity(s);
                 break;
+            case R.id.nav_anime:
+                Intent a= new Intent(favorit.this,tambahanime.class);
+                startActivity(a);
+                break;
             case R.id.nav_tentang:
                 Intent t= new Intent(favorit.this,tentang.class);
                 startActivity(t);

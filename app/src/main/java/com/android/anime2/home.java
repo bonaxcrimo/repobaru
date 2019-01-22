@@ -143,7 +143,9 @@ public class home extends AppCompatActivity
             nav_Menu.findItem(R.id.nav_register).setVisible(false);
             nav_Menu.findItem(R.id.nav_favorit).setVisible(true);
             nav_Menu.findItem(R.id.nav_logout).setVisible(true);
+            nav_Menu.findItem(R.id.nav_anime).setVisible(true);
         }else{
+            nav_Menu.findItem(R.id.nav_anime).setVisible(false);
             nav_Menu.findItem(R.id.nav_favorit).setVisible(false);
             nav_Menu.findItem(R.id.nav_logout).setVisible(false);
         }
@@ -318,6 +320,10 @@ public class home extends AppCompatActivity
             case R.id.nav_tentang:
                 Intent t= new Intent(home.this,tentang.class);
                 startActivity(t);
+                break;
+            case R.id.nav_anime:
+                Intent a= new Intent(home.this,tambahanime.class);
+                startActivity(a);
                 break;
             case R.id.nav_logout:
                 SharedPrefManager.getInstance(getApplicationContext()).logout();

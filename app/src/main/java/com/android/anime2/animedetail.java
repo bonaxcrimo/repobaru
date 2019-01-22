@@ -241,6 +241,10 @@ public class animedetail extends AppCompatActivity
                 Intent g= new Intent(animedetail.this,login.class);
                 startActivity(g);
                 break;
+            case R.id.nav_anime:
+                Intent a= new Intent(animedetail.this,tambahanime.class);
+                startActivity(a);
+                break;
             case R.id.nav_register:
                 Intent s= new Intent(animedetail.this,register.class);
                 startActivity(s);

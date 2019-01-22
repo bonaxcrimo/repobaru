@@ -55,9 +55,11 @@ public class tentang extends AppCompatActivity
             nav_Menu.findItem(R.id.nav_register).setVisible(false);
             nav_Menu.findItem(R.id.nav_logout).setVisible(true);
             nav_Menu.findItem(R.id.nav_favorit).setVisible(true);
+            nav_Menu.findItem(R.id.nav_anime).setVisible(true);
         }else{
             nav_Menu.findItem(R.id.nav_logout).setVisible(false);
             nav_Menu.findItem(R.id.nav_favorit).setVisible(false);
+            nav_Menu.findItem(R.id.nav_anime).setVisible(false);
         }
     }
 
@@ -116,6 +118,10 @@ public class tentang extends AppCompatActivity
             case R.id.nav_register:
                 Intent s= new Intent(tentang.this,register.class);
                 startActivity(s);
+                break;
+            case R.id.nav_anime:
+                Intent a= new Intent(tentang.this,tambahanime.class);
+                startActivity(a);
                 break;
             case R.id.nav_tentang:
                 Intent t= new Intent(tentang.this,tentang.class);

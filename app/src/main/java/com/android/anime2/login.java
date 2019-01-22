@@ -95,6 +95,7 @@ public class login extends AppCompatActivity
         }else{
             nav_Menu.findItem(R.id.nav_favorit).setVisible(false);
             nav_Menu.findItem(R.id.nav_logout).setVisible(false);
+            nav_Menu.findItem(R.id.nav_anime).setVisible(false);
         }
     }
     private void userLogin(){
@@ -254,6 +255,10 @@ public class login extends AppCompatActivity
             case R.id.nav_tentang:
                 Intent t= new Intent(login.this,tentang.class);
                 startActivity(t);
+                break;
+            case R.id.nav_anime:
+                Intent a= new Intent(login.this,tambahanime.class);
+                startActivity(a);
                 break;
             case R.id.nav_logout:
                 SharedPrefManager.getInstance(getApplicationContext()).logout();

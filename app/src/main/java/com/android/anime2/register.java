@@ -164,6 +164,7 @@ public class register extends AppCompatActivity
         }else{
             nav_Menu.findItem(R.id.nav_logout).setVisible(false);
             nav_Menu.findItem(R.id.nav_favorit).setVisible(false);
+            nav_Menu.findItem(R.id.nav_anime).setVisible(false);
         }
     }
 
@@ -226,6 +227,10 @@ public class register extends AppCompatActivity
             case R.id.nav_tentang:
                 Intent t= new Intent(register.this,tentang.class);
                 startActivity(t);
+                break;
+            case R.id.nav_anime:
+                Intent a= new Intent(register.this,tambahanime.class);
+                startActivity(a);
                 break;
             case R.id.nav_logout:
                 SharedPrefManager.getInstance(getApplicationContext()).logout();

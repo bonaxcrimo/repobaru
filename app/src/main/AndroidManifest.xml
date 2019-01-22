@@ -43,9 +43,13 @@
             android:name=".animedetail"
             android:label="@string/title_activity_animedetail"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Ulas" android:parentActivityName=".Ulas" >
-        </activity>
-        <activity android:name=".UlasanActivity" android:parentActivityName=".UlasanActivity"></activity>
+        <activity
+            android:name=".Ulas"
+            android:parentActivityName=".Ulas"></activity>
+        <activity
+            android:name=".UlasanActivity"
+            android:parentActivityName=".UlasanActivity" />
+        <activity android:name=".tambahanime" android:parentActivityName=".tambahanime"></activity>
     </application>
 
 </manifest>
